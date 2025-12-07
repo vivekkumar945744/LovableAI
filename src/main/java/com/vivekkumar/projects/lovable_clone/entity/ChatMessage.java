@@ -2,6 +2,7 @@ package com.vivekkumar.projects.lovable_clone.entity;
 
 import com.vivekkumar.projects.lovable_clone.enums.MessageRole;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +10,6 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
-@Entity
 @Setter
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)

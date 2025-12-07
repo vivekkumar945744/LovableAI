@@ -2,12 +2,12 @@ package com.vivekkumar.projects.lovable_clone.entity;
 
 import com.vivekkumar.projects.lovable_clone.enums.SubscriptionStatus;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-@Entity
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
