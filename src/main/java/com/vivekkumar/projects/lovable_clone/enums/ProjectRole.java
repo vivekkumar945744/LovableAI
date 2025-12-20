@@ -1,5 +1,5 @@
 package com.vivekkumar.projects.lovable_clone.enums;
 
 public enum ProjectRole {
-    EDITOR, VIEWER
+    EDITOR, VIEWER, OWNER
 }

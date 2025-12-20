@@ -1,7 +1,14 @@
 package com.vivekkumar.projects.lovable_clone.entity;
 
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProjectMemberId {
 
     Long projectId;
-    User userId;
+    Long userId;
 }
