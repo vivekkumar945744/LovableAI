@@ -5,6 +5,7 @@ import com.vivekkumar.projects.lovable_clone.dto.project.ProjectResponse;
 import com.vivekkumar.projects.lovable_clone.dto.project.ProjectSummaryResponse;
 import com.vivekkumar.projects.lovable_clone.entity.Project;
 import com.vivekkumar.projects.lovable_clone.entity.User;
+import com.vivekkumar.projects.lovable_clone.error.ResourceNotFoundException;
 import com.vivekkumar.projects.lovable_clone.mapper.ProjectMapper;
 import com.vivekkumar.projects.lovable_clone.repository.ProjectRepository;
 import com.vivekkumar.projects.lovable_clone.repository.UserRepository;
@@ -87,6 +88,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     public Project getAccessibleProjectById(Long id, Long userId) {
-        return projectRepository.findAccessibleProjectById(id, userId).orElseThrow();
+        return projectRepository.findAccessibleProjectById(id, userId)
+                .orElseThrow(() -> new ResourceNotFoundException("Pronect", id.toString()));
     }
 }
