@@ -27,8 +27,8 @@ public class User {
     String name;
 
     @Column(nullable = false)
-    String email;
-    String passwordHash;
+    String username;
+    String password;
     String avatarUrl;
 
     @CreationTimestamp
