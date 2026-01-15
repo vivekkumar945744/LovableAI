@@ -17,7 +17,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
             WHERE p.deletedAt IS NULL
             AND EXISTS (
                 SELECT 1 FROM ProjectMember pm
-                WHERE pm.id.usersId = :userId
+                WHERE pm.id.userId = :userId
                 AND pm.id.projectId = p.id
             )
                 ORDER BY p.updatedAt DESC
@@ -31,7 +31,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
                 AND p.deletedAt IS NULL
                 AND EXISTS (
                     SELECT 1 FROM ProjectMember pm
-                    WHERE pm.id.usersId = :userId
+                    WHERE pm.id.userId = :userId
                     AND pm.id.projectId = :projectId
                 )
             """
